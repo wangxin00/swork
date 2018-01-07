@@ -1,0 +1,14 @@
+﻿<html>
+   <head>
+      <title>{{ '编辑课程' }}</title>
+   </head>
+   <body>
+      <form action="/course.edit/{{cou_no}}/{{tea_no}}/{{stu_no}}" method="post">
+        上课时间：<input type="text" name="time" value="{{time}}">
+        上课地点:<input type="text" name="place" value="{{place}}">
+        <input type="submit" value="编辑">
+      </form>
+     <hr>
+     <a href="/" > 回到课程首页 </a>
+   </body>
+ </html>

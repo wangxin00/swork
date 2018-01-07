@@ -1,0 +1,75 @@
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>{% block title %}标题{% end %}</title>
+{% block css %}{% end %}
+<style type="text/css">
+div.container {
+	width: 100%;
+	margin:0px;
+	border:1px solid gray;
+	line-height:150%;
+}
+div.header, div.footer {
+	font-size: 22px;
+	padding:0.5em;
+	color:white;
+	background-color:gray;
+	clear:left;
+}
+div.left {
+	float:left;
+	width:160px;
+	margin:0;
+	padding:1em;
+}
+div.content {
+	min-height: 80%;
+	margin-left:190px;
+	border-left:1px solid gray;
+	padding:1em;
+}
+caption{
+	caption-side:top;
+}
+table{
+	border-collapse:collapse;
+}
+table,td,th{
+	border:1px solid black;
+}
+td{
+	text-align:center;
+	height:35px;
+	padding:10px;
+}
+th {
+	background-color:lightgrey;
+	height:50px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">简单课程表管理系统</div>
+
+<div class="left">
+	<ul>
+		<li><a href="/">课程首页</a></li>
+		<li><a href="/student">学生课表</a></li>
+		<li><a href="/teacher">教师课表</a></li>
+	</ul>
+</div>
+
+<div class="content">
+{% block content %}{% end %}
+</div>
+
+<div class="footer">Copyright 2017 by TJPU.</div>
+</div>
+
+</body>
+</html>
